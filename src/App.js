@@ -1,23 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import { React, useState, useEffect } from "react";
+import "./App.css";
+import Nav from "./components/Nav.js";
+import Intro from "./components/Intro.js";
+import MyServices from "./components/MyServices.js";
+import Aboutme from "./components/Aboutme.js";
+import Portfolio from "./components/Portfolio.js";
+import Footer from "./components/Footer.js";
 
 function App() {
+  const [hamburgerOpen, setHamburgerOpen] = useState(false);
+
+  const toggleHamburger = () => {
+    setHamburgerOpen((prevState) => !prevState);
+  };
+
+  useEffect(() => {
+    hamburgerOpen
+      ? document.body.classList.add("nav-open")
+      : document.body.classList.remove("nav-open");
+
+    // return function cleanup() {    //   document.body.classList.remove("nav-open");
+    // };
+  }, [hamburgerOpen]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Nav isOpen={hamburgerOpen} handleToggle={() => toggleHamburger()} />
+      <Intro />
+      <MyServices />
+      <Aboutme />
+      <Portfolio />
+      <Footer />
     </div>
   );
 }
