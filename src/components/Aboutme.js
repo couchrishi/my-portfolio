@@ -1,5 +1,5 @@
 import React from "react";
-import aboutMePic from "../img/aboutme.jpg";
+import aboutMePic from "../img/couchrishi.jpg";
 
 export default function Aboutme() {
   return (
@@ -12,14 +12,13 @@ export default function Aboutme() {
           I'm a self-taught developer with 10+ years of tech consulting &
           operations background. My dev name is <strong>couchrishi</strong>.
           I've worked for some of the top web2 companies in the last decade
-          including Microsoft, Oracle & Google (currently). I've been helping
+          including Microsoft, Oracle & Google. I've been helping
           startups & enterprises embrace emerging technologies to solve their
           business & operational challenges.
         </p>
         <p>
           I'm an Internet optimist with some extra passion for data-heavy
-          verticals such as video streaming & gaming. I've represented Google in
-          the India Gaming Summit 2021 as an M&E specialist. I'm also part of
+          verticals such as video streaming & gaming. I'm also part of
           the "Google for Startups" program where I mentor early stage startups
           in the areas of cloud tech, product growth & user engagement
           strategies.
